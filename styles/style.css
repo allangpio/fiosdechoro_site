@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,800;1,300;1,400;1,800&family=Yanone+Kaffeesatz:wght@300;500;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: white;
+  font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+  font-family: Yanone Kaffeesatz;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 100px;
+  line-height: 110px;
+}
+
+h2 {
+  font-family: Yanone Kaffeesatz;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 64px;
+}
+
+h3 {
+  font-family: Raleway, sans-serif;
+  font-weight: 300;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+}
+
+.main-page {
+  background-image: url(/imagens/bg-def.png);
+  background-size: contain;
+  background-position: center 1vh;
+  height: 100vh;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 85%;
+  padding-top: 10px;
+  margin: 0px auto;
+}
+
+header .logo-container .logo {
+  max-width: 150px;
+}
+
+header .nav-links-container .nav-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  padding-bottom: 12px;
+}
+
+header .nav-links-container .nav-links .nav-link a {
+  text-decoration: none;
+  font-size: 16px;
+  padding: 0 15px;
+  color: white;
+}
+
+.home-hero {
+  width: 85%;
+  margin: 2% auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1;
+}
+
+.home-hero .chamada {
+  padding-left: 20px;
+  margin-right: 100px;
+}
+
+.home-hero .foto-hero {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-top: 30px;
+}
+
+.home-hero .foto-hero img {
+  width: 100%;
+  margin-top: 20px;
+  min-width: 400px;
+  border: 10px solid #FFFFFF;
+  -webkit-transform: rotate(7.12deg);
+          transform: rotate(7.12deg);
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.home-about {
+  height: 100vh;
+  background-color: rgba(3, 32, 44, 0.685);
+}
+
+.home-about .home-about-container {
+  padding-top: 5%;
+  width: 85%;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(350px, 0.7fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(350px, 0.7fr));
+  -ms-grid-rows: 60px 315px;
+      grid-template-rows: 60px 315px;
+  grid-auto-rows: 315px;
+  gap: 30px;
+  place-content: center center;
+  grid-auto-flow: dense;
+}
+
+.home-about .home-about-container .about-title {
+  grid-column: 1 / -1;
+}
+
+.home-about .home-about-container .video-container {
+  -ms-grid-row: 2;
+  grid-row: 2;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.home-about .home-about-container .video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.home-about .home-about-container .about-text {
+  line-height: 1.5rem;
+  text-align: justify;
+  margin-bottom: 20px;
+  margin-right: 10px;
+}
+/*# sourceMappingURL=style.css.map */
