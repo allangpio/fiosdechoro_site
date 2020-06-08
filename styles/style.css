@@ -96,6 +96,11 @@ header .nav-links-container .nav-links .nav-link a {
   margin-right: 100px;
 }
 
+.home-hero .chamada h1 {
+  font-size: 100px;
+  line-height: 110px;
+}
+
 .home-hero .foto-hero {
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -113,6 +118,39 @@ header .nav-links-container .nav-links .nav-link a {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+}
+
+@media (max-width: 1000px) {
+  .home-hero .chamada {
+    margin-right: 60px;
+  }
+  .home-hero .chamada h1 {
+    font-size: 75px;
+    line-height: 90px;
+  }
+  .home-hero .chamada h3 {
+    font-size: 1.1rem;
+  }
+  .home-hero .foto-hero img {
+    max-width: 340px;
+  }
+}
+
+@media (max-width: 800px) {
+  .home-hero .chamada {
+    margin-right: 20px;
+  }
+  .home-hero .chamada h1 {
+    font-size: 65px;
+    line-height: 110px;
+  }
+  .home-hero .chamada h3 {
+    font-size: 1.1rem;
+  }
+  .home-hero .foto-hero img {
+    margin-top: 20px;
+    max-width: 340px;
+  }
 }
 
 .home-about {
