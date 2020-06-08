@@ -44,9 +44,10 @@ h3 {
 }
 
 .main-page {
-    background-image: url(/imagens/bg-def.png) ;
-    background-size: contain;
-    background-position: center 1vh;  
+    background-image: url(/imagens/bg-linha.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;  
     height: 100vh;    
     
 }
@@ -86,6 +87,31 @@ header {
     }
 }
 
+@media (max-width: 720px) {
+    header {
+        flex-direction: column;                
+        justify-content: center;        
+        padding-top: 10px;
+        margin: 0px auto;    
+        .logo-container{
+            .logo {
+                max-width: 150px;
+            }
+        }
+        .nav-links-container {
+                    
+            .nav-links {                
+                .nav-link a{                    
+                    font-size: 12px;
+                    padding: 0 10px;
+                              
+                       
+                }
+            }
+        }
+    }
+}
+
 // ***********
 // HOME
 // ***********
@@ -96,7 +122,7 @@ header {
     display: flex;
     justify-content: space-between; 
     align-items: center; 
-    z-index: 1;
+    
     .chamada {
         padding-left: 20px;        
         margin-right: 100px;
@@ -115,7 +141,7 @@ header {
         width: 100%;
         margin-top: 20px;
         min-width: 400px;        
-        border: 10px solid #FFFFFF;        
+        border: 4px solid #FFFFFF;        
         transform: rotate(7.12deg);
         flex: 1;
         
@@ -135,27 +161,62 @@ header {
             }                      
         }      
         .foto-hero img{
-            max-width: 340px;
+            max-width: 339px;
+            color: white;
         }
     }
 }
 
 @media (max-width: 800px) {
-    .home-hero {        
+    .home-hero {  
+        margin-top: 50px;      
         .chamada {                    
             margin-right:20px;
             h1 {                
                 font-size: 65px;
-                line-height: 110px;
+                line-height: 70px;
             } 
             h3 {
-                font-size: 1.1rem;
+                font-size: 1rem;
+                line-height: 1.5rem;
             }                               
         }
         .foto-hero img{            
-            margin-top: 20px;
-            max-width: 340px;                                        
+            max-width: 339px;            
+            min-width: 300px;
         }           
+    }
+}
+
+@media (max-width: 630px) {
+    .home-hero {  
+        margin: 0px auto;
+        flex-wrap: wrap-reverse;
+        justify-content: center;
+        align-items: center;
+             
+        
+        .chamada {                    
+            margin: 0px 0.5%;
+            
+            h1 {                
+                font-size: 50px;
+                line-height: 70px;
+            } 
+            h3 {
+                font-size: .9rem;
+                line-height: 1.5rem;
+            }                               
+        }
+        .foto-hero{
+            padding-top: 0;
+            text-align: center;
+        
+        img{            
+            max-width: 285px;            
+            
+        }           
+    }
     }
 }
 
