@@ -34,9 +34,8 @@ h3 {
 }
 
 .main-page {
-  background-image: url(/imagens/bg-def.png);
-  background-size: contain;
-  background-position: center 1vh;
+  background: url(/imagens/bg-linha.png) no-repeat center center;
+  background-size: cover;
   height: 100vh;
 }
 
@@ -76,68 +75,131 @@ header .nav-links-container .nav-links .nav-link a {
   color: white;
 }
 
+@media (max-width: 710px) {
+  header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-top: 0px;
+    margin: 0px auto 20px auto;
+  }
+  header .logo-container .logo {
+    max-width: 150px;
+  }
+  header .nav-links-container .nav-links .nav-link a {
+    font-size: 12px;
+    padding: 0 10px;
+  }
+}
+
 .home-hero {
   width: 85%;
-  margin: 2% auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(320px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  -ms-grid-rows: 80vh;
+      grid-template-rows: 80vh;
+  margin: auto;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  z-index: 1;
 }
 
 .home-hero .chamada {
   padding-left: 20px;
-  margin-right: 100px;
-}
-
-.home-hero .foto-hero {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  padding-top: 30px;
 }
 
 .home-hero .foto-hero img {
   width: 100%;
   margin-top: 20px;
-  min-width: 400px;
-  border: 10px solid #FFFFFF;
+  min-width: 320px;
+  border: 4px solid #ffffff;
   -webkit-transform: rotate(7.12deg);
           transform: rotate(7.12deg);
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+}
+
+@media (max-width: 1100px) {
+  .chamada h1 {
+    font-size: 80px;
+    line-height: 90px;
+  }
+  .chamada h3 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .chamada h1 {
+    font-size: 70px;
+    line-height: 80px;
+  }
+  .chamada h3 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-hero {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    place-items: center center;
+    gap: 10px;
+  }
+  .home-hero .foto-hero {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+  }
+  .home-hero .foto-hero img {
+    max-width: 275px;
+    min-width: 200px;
+  }
+  .home-hero .chamada {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .home-hero .chamada h1 {
+    font-size: 65px;
+    line-height: 75px;
+  }
+  .home-hero .chamada h3 {
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+  }
 }
 
 .home-about {
-  height: 100vh;
-  background-color: rgba(3, 32, 44, 0.685);
+  background: url(/imagens/bg-about.png) no-repeat center center;
+  background-size: cover;
+  height: 180vh;
 }
 
 .home-about .home-about-container {
-  padding-top: 5%;
+  padding-top: 24px;
   width: 85%;
   margin: 0 auto;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(350px, 0.7fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(350px, 0.7fr));
-  -ms-grid-rows: 60px 315px;
-      grid-template-rows: 60px 315px;
-  grid-auto-rows: 315px;
-  gap: 30px;
+  -ms-grid-columns: (minmax(400px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-auto-rows: auto;
+  grid-gap: 30px;
   place-content: center center;
   grid-auto-flow: dense;
 }
 
 .home-about .home-about-container .about-title {
   grid-column: 1 / -1;
+  padding-bottom: 15px;
 }
 
 .home-about .home-about-container .video-container {
@@ -161,7 +223,98 @@ header .nav-links-container .nav-links .nav-link a {
 .home-about .home-about-container .about-text {
   line-height: 1.5rem;
   text-align: justify;
+}
+
+.home-about .home-about-container .about-img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.home-about .home-about-container .about-img img {
+  max-width: 450px;
+}
+
+.home-about .home-about-container .about-text2,
+.home-about .home-about-container .about-img {
+  line-height: 1.5rem;
+  text-align: justify;
   margin-bottom: 20px;
   margin-right: 10px;
+  margin-top: 30px;
+}
+
+@media (max-width: 976px) {
+  .home-about .home-about-container {
+    gap: 10px;
+  }
+  .home-about .home-about-container .about-text {
+    padding: 0;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  .home-about .home-about-container .about-text2 {
+    display: none;
+  }
+  .home-about .home-about-container .about-img {
+    display: none;
+  }
+}
+
+.home-about .integrantes {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  width: 85%;
+  margin: auto;
+  place-items: center center;
+  gap: 20px;
+}
+
+.home-about .integrantes .integrante {
+  width: 200px;
+  height: 264px;
+  padding-top: 24px;
+}
+
+.home-about .integrantes .integrante > img {
+  max-width: 200px;
+  border: 5px solid white;
+  position: absolute;
+  display: block;
+  z-index: 0;
+}
+
+.home-about .integrantes .integrante > .hover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  width: inherit;
+  height: inherit;
+  z-index: -1;
+  text-align: center;
+  background-color: rgba(236, 167, 110, 0.8);
+}
+
+.home-about .integrantes .integrante:hover .hover {
+  z-index: 1;
+}
+
+@media (max-width: 976px) {
+  .home-about .integrantes {
+    -ms-grid-columns: minmax(175px, 1fr) minmax(180px, 1fr);
+        grid-template-columns: minmax(175px, 1fr) minmax(180px, 1fr);
+  }
 }
 /*# sourceMappingURL=style.css.map */
