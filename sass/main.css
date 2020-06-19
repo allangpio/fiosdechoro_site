@@ -209,8 +209,8 @@ p {
 }
 
 .section-header {
-  background-image: -webkit-gradient(linear, left top, right bottom, from(#ebbc64d7), to(#eca76ed7)), url("imagens/content1.jpg");
-  background-image: linear-gradient(to right bottom, #ebbc64d7, #eca76ed7), url("imagens/content1.jpg");
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#ebbc64d7), to(#eca76ed7)), url("../imagens/content1.jpg");
+  background-image: linear-gradient(to right bottom, #ebbc64d7, #eca76ed7), url("../imagens/content1.jpg");
   background-size: cover;
   background-position: center 33%;
   height: 90vh;
@@ -235,7 +235,7 @@ p {
 .section-about {
   padding-top: 2rem;
   padding-bottom: 2rem;
-  background: url(imagens/bg-about.png) no-repeat;
+  background: url(../imagens/bg-about.png) no-repeat;
   background-position: top;
   background-size: cover;
 }
