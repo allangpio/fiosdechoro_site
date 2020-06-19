@@ -1,0 +1,30 @@
+.section-header {
+  background-image: linear-gradient(to right bottom, #ebbc64d7, #eca76ed7),
+    url('/imagens/content1.jpg');
+
+  background-size: cover;
+  background-position: center 33%;
+  height: 90vh;
+}
+
+.home-hero {
+  width: 85%;
+  text-align: left;
+  margin: auto;
+  height: 90vh;
+  position: relative;
+  &__content {
+    position: absolute;
+    top: 40%;
+    left: 55%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.section-about {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  background: url(/imagens/bg-about.png) no-repeat;
+  background-position: top;
+  background-size: cover;
+}
