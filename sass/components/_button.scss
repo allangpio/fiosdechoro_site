@@ -1,0 +1,25 @@
+.btn {
+  &:link,
+  &:visited {
+    text-decoration: none;
+    background-color: #fff;
+    color: $color-blue;
+    font-size: 1.2rem;
+    font-family: Raleway, sans-serif;
+
+    display: inline-block;
+
+    margin-top: 2rem;
+    padding: 0.75rem 1.2rem;
+    border-radius: 0.5rem;
+    transition: all 0.2 ease;
+  }
+  &:hover {
+    transform: scale(1.05) translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(#eee, 0.1);
+  }
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(#eee, 0.1);
+  }
+}

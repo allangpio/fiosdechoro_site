@@ -34,8 +34,10 @@ h3 {
 }
 
 .main-page {
-  background: url(/imagens/bg-linha.png) no-repeat center center;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#ebbc64d7), to(#eca76ed7)), url("/imagens/content1.jpg");
+  background-image: linear-gradient(to right bottom, #ebbc64d7, #eca76ed7), url("/imagens/content1.jpg");
   background-size: cover;
+  background-position: top;
   height: 100vh;
 }
 
@@ -98,83 +100,18 @@ header .nav-links-container .nav-links .nav-link a {
 
 .home-hero {
   width: 85%;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(320px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  -ms-grid-rows: 80vh;
-      grid-template-rows: 80vh;
+  text-align: left;
   margin: auto;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  height: 90vh;
+  position: relative;
 }
 
 .home-hero .chamada {
-  padding-left: 20px;
-}
-
-.home-hero .foto-hero img {
-  width: 100%;
-  margin-top: 20px;
-  min-width: 320px;
-  border: 4px solid #ffffff;
-  -webkit-transform: rotate(7.12deg);
-          transform: rotate(7.12deg);
-}
-
-@media (max-width: 1100px) {
-  .chamada h1 {
-    font-size: 80px;
-    line-height: 90px;
-  }
-  .chamada h3 {
-    font-size: 1.1rem;
-  }
-}
-
-@media (max-width: 900px) {
-  .chamada h1 {
-    font-size: 70px;
-    line-height: 80px;
-  }
-  .chamada h3 {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .home-hero {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-    -ms-grid-rows: 1fr;
-        grid-template-rows: 1fr;
-    place-items: center center;
-    gap: 10px;
-  }
-  .home-hero .foto-hero {
-    -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-            order: 0;
-  }
-  .home-hero .foto-hero img {
-    max-width: 275px;
-    min-width: 200px;
-  }
-  .home-hero .chamada {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-  }
-  .home-hero .chamada h1 {
-    font-size: 65px;
-    line-height: 75px;
-  }
-  .home-hero .chamada h3 {
-    font-size: 0.9rem;
-    line-height: 1.3rem;
-  }
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .home-about {
