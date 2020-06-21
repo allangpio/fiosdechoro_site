@@ -24,4 +24,12 @@
       }
     }
   }
+
+  &--about {
+    position: absolute;
+    top: 0;
+    left: 5vw;
+    width: 85vw;
+    z-index: 10;
+  }
 }

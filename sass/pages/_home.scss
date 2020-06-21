@@ -1,7 +1,9 @@
 .section-header {
-  background-image: linear-gradient(to right bottom, #ebbc64d7, #eca76ed7),
-    url('../imagens/content1.jpg');
+  // background-image: linear-gradient(to right bottom, #ebbc64d7, #eca76ed7),
+  //   url('../imagens/content1.jpg');
 
+  background-image: url('../imagens/bg-1.png'), url('../imagens/content1.jpg');
+  background-blend-mode: multiply;
   background-size: cover;
   background-position: center 33%;
   height: 90vh;
@@ -18,6 +20,10 @@
     top: 40%;
     left: 55%;
     transform: translate(-50%, -50%);
+    & h1 {
+      animation: fadeIn 1.5s ease-in backwards;
+      backface-visibility: hidden;
+    }
   }
 }
 
@@ -27,4 +33,7 @@
   background: url(../imagens/bg-about.png) no-repeat;
   background-position: top;
   background-size: cover;
+
+  // teste de popup
+  position: relative;
 }
