@@ -22,4 +22,10 @@
     transform: translateY(-1px);
     box-shadow: 0 0.5rem 1rem rgba(#eee, 0.1);
   }
+
+  &--blue:link,
+  &--blue:visited {
+    background-color: $color-blue;
+    color: white;
+  }
 }

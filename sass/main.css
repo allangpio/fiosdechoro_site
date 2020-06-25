@@ -117,6 +117,11 @@ p {
           box-shadow: 0 0.5rem 1rem rgba(238, 238, 238, 0.1);
 }
 
+.btn--blue:link, .btn--blue:visited {
+  background-color: #021e2b;
+  color: white;
+}
+
 .cards {
   width: 12.5rem;
   height: 21rem;
@@ -374,5 +379,59 @@ p {
   background-position: top;
   background-size: cover;
   position: relative;
+}
+
+.info {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (25vw)[auto-fit];
+      grid-template-columns: repeat(auto-fit, 25vw);
+  width: 85%;
+  margin: auto;
+  height: 90vh;
+  padding-top: 3em;
+  gap: 2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.info__card {
+  height: 500px;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  color: #333;
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(51, 51, 51, 0.4);
+          box-shadow: 0 0.5rem 1rem rgba(51, 51, 51, 0.4);
+}
+
+.info__card--projects {
+  text-align: center;
+}
+
+.info__card--projects P {
+  width: 85%;
+  text-align: left;
+  margin: 2.5rem auto 1rem auto;
+}
+
+.info__card__img-container {
+  width: 90%;
+  margin: 1rem auto;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.info__card__img-container img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.info__card--soundcloud {
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
 }
 /*# sourceMappingURL=main.css.map */
