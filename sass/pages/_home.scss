@@ -41,16 +41,19 @@
 .info {
   display: grid;
   grid-template-columns: repeat(auto-fit, 25vw);
-  width: 85%;
-  margin: auto;
-  height: 90vh;
-  padding-top: 3em;
   gap: 2rem;
   justify-content: center;
 
+  margin: auto;
+  height: 90vh;
+  padding-top: 3rem;
+
+  background-color: $color-yellow;
+
   &__card {
-    height: 500px;
+    height: 455px;
     width: 100%;
+    background-color: #eee;
 
     border-radius: 8px;
     overflow: hidden;
@@ -60,11 +63,12 @@
 
   &__card--projects {
     text-align: center;
+    padding: 1rem;
 
     P {
       width: 85%;
       text-align: left;
-      margin: 2.5rem auto 1rem auto;
+      margin: 3.5rem auto 1rem auto;
     }
   }
 
@@ -75,12 +79,85 @@
     overflow: hidden;
 
     img {
-      width: 100%;
-      object-fit: cover;
+      height: 6rem;
     }
   }
 
   &__card--soundcloud {
-    height: max-content;
+  }
+}
+
+.footer {
+  height: max-content;
+  background-color: $color-blue;
+  margin: 0 auto;
+  padding: 1em 2em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: 5rem;
+  grid-auto-flow: dense;
+  // display: flex;
+  // justify-content: space-around;
+
+  &__info {
+    justify-self: end;
+  }
+
+  &__logo {
+    width: 8.5rem;
+    margin-left: -1em;
+    margin-bottom: -0.5em;
+  }
+
+  &__list {
+    list-style: none;
+    &--nav {
+      display: flex;
+      padding-top: 0.3em;
+    }
+  }
+
+  &__item {
+    font-size: 0.8rem;
+    margin-bottom: 0.3em;
+  }
+
+  &__link {
+    padding-right: 1em;
+    &__icon {
+      width: 1.1rem;
+    }
+  }
+
+  &__contact {
+  }
+}
+
+.form {
+  justify-self: start;
+  display: flex;
+  flex-direction: column;
+  &__input {
+    margin-bottom: 0.2em;
+    font-size: 0.8rem;
+    font-family: Raleway, sans-serif;
+    padding: 0.3em 0.1em;
+    width: 10rem;
+  }
+
+  &__label {
+    font-size: 0.8rem;
+    margin-bottom: 0.2em;
+  }
+
+  &__text {
+    margin-bottom: 0.2em;
+    width: 20rem;
+    font-family: Raleway, sans-serif;
+  }
+
+  &__button {
+    width: max-content;
+    padding: 0.2em 0.5em;
   }
 }
