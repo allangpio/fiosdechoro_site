@@ -12,23 +12,15 @@
     <meta name="robots" content="index,follow" />
 
     <link href="imagens/fios_branco.png" rel="icon" />
+
+    <link rel="stylesheet" href="styles/icon-basic.css" />
+
     <link rel="stylesheet" href="sass/main.css" />
 
     <title>Fios</title>
   </head>
 
   <body>
-    <div id="fb-root"></div>
-
-    <!-- script for facebook api -->
-    <script
-      async
-      defer
-      crossorigin="anonymous"
-      src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v7.0"
-      nonce="v9bJyBj3"
-    ></script>
-
     <div class="section-header">
       <header class="header">
         <div class="header__logo-container">
@@ -260,56 +252,46 @@
     </section>
 
     <section class="info">
-      <div class="info__card info__card--projects">
-        <figure class="info__card__img-container">
-          <img src="imagens/projects-ico.svg" alt="Ícone" />
-        </figure>
-
-        <p>
+      <div class="info-card">
+        <i class="info-card__icon icon-basic-todolist-pen"></i>
+        <p class="info-card__text">
           Atualmente o Fios está com 3 projetos ativos: TRAMA, Frevos de Rua e É
-          de Fazer Chorar, para saber um pouco mais sobre eles:
+          de Fazer Chorar. Para ter acesso a todas as informações:
         </p>
         <a href="sobre.html" class="btn btn--secondary btn-small btn--blue">
           Ver projetos
         </a>
       </div>
 
-      <div class="info__card info__card--soundcloud">
-        <iframe
-          width="100%"
-          height="450"
-          scrolling="no"
-          frameborder="no"
-          allow="autoplay"
-          src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/22047257&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
-        ></iframe>
-        <div
-          style="
-            font-size: 16px;
-            color: #cccccc;
-            line-break: anywhere;
-            word-break: normal;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            font-family: Raleway, sans-serif;
-            font-weight: 300;
-          "
-        ></div>
+      <div class="info-card">
+        <i class="info-card__icon icon-basic-video"></i>
+
+        <p class="info-card__text">
+          Nosso canal do Youtube possui uma série de vídeos de apresentações e
+          músicas. Aqui você pode ver, ouvir e ler um pouco sobre cada um deles:
+        </p>
+        <a href="sobre.html" class="btn btn--secondary btn-small btn--blue">
+          Ver vídeos
+        </a>
       </div>
     </section>
 
     <footer class="footer">
       <div class="footer__info">
-        <img
-          src="imagens/fios_branco.png"
-          alt="Logo Fios"
-          class="footer__logo"
-        />
+        <h3 class="heading-tertiary u-margin-bottom-sm">Contato</h3>
         <ul class="footer__list">
-          <li class="footer__item">(11) 96350-0589</li>
-          <li class="footer__item">(11) 96350-0589</li>
-          <li class="footer__item">producaofiosdechoro@gmail.com</li>
+          <li class="footer__item">
+            <i class="icon-basic-smartphone"></i>
+            (11) 96350-0589
+          </li>
+          <li class="footer__item">
+            <i class="icon-basic-smartphone"></i>
+            (11) 96350-0589
+          </li>
+          <li class="footer__item">
+            <i class="icon-basic-mail"></i>
+            producaofiosdechoro@gmail.com
+          </li>
         </ul>
         <ul class="footer__list footer__list--nav">
           <li class="footer__item">
@@ -341,8 +323,19 @@
           </li>
         </ul>
       </div>
+      <div class="footer__logo-box">
+        <img src="imagens/logo-big.png" alt="Logo Fios" class="footer__logo" />
+      </div>
 
-      <div class="footer__contact">
+      <div class="footer__copyright">
+        <p class="footer__copyright-text">
+          Copyright &copy; Fios de Choro 2020
+          <br />
+          Feito por: &copy; Allan Gaia Pio
+        </p>
+      </div>
+
+      <!-- <div class="footer__contact">
         <h3 class="heading-tertiary">Fale com o Fios</h3>
         <form action="#" class="form">
           <label for="name" class="form__label">Nome</label>
@@ -358,7 +351,7 @@
 
           <button class="form__button">Enviar</button>
         </form>
-      </div>
+      </div> -->
     </footer>
 
     <script src="index.js"></script>
