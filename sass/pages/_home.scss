@@ -42,7 +42,10 @@
   margin: 0 auto;
   height: 90vh;
 
-  background-color: $color-yellow;
+  background-image: url('../imagens/bg.png'), url('../imagens/content3.jpg');
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position: center;
 
   display: grid;
   grid-template-columns: repeat(auto-fit, 25vw);

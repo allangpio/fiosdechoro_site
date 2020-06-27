@@ -44,7 +44,7 @@
 .info-card {
   height: 23rem;
   width: 19rem;
-  background-color: #eee;
+  background-color: rgba(#eee, 0.85);
 
   border-radius: 8px;
   overflow: hidden;
@@ -74,7 +74,7 @@
   }
 
   &:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 0.8rem 1.2rem rgba(#333, 0.5);
+    transform: translateY(-5px);
+    box-shadow: 0 0.6rem 1rem rgba(#ccc, 0.5);
   }
 }

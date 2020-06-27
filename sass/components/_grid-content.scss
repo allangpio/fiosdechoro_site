@@ -6,6 +6,9 @@
     &--span2 {
       grid-column: span 2;
     }
+    &--span4 {
+      grid-column: span 4;
+    }
   }
   & .cards {
     place-self: center center;

@@ -1,0 +1,21 @@
+.music-main {
+}
+
+.music-about {
+  padding-top: 8rem;
+  padding-bottom: 2rem;
+  background: url(../imagens/bg-about.png) no-repeat;
+  background-position: top;
+  background-size: cover;
+
+  .link:link,
+  .link:visited {
+    color: white;
+    transition: all 0.2s ease;
+  }
+
+  .link:hover {
+    box-shadow: 0 0.1rem 0.4rem rgba(white, 0.3);
+    transform: scale(1.1);
+  }
+}
