@@ -1,0 +1,74 @@
+.projects {
+  padding-top: 8rem;
+  padding-bottom: 2rem;
+  background: url(../imagens/bg-about.png) no-repeat;
+  background-position: top;
+  background-size: cover;
+
+  .grid {
+    background-color: rgba(#fff, 0.9);
+    padding: 1.5rem 1.5rem;
+    border-radius: 8px;
+    color: $color-blue;
+  }
+
+  .img-container {
+    border-radius: 1rem;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.nav-projects {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  width: 80vw;
+  margin: 0 auto 3rem auto;
+
+  .nav-items {
+    cursor: pointer;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 0.2rem;
+    transition: all 0.2s ease;
+    background-color: transparent;
+
+    &:hover {
+      transform: scale(1.1) translateY(-3px);
+      box-shadow: 0 0.4rem 0.8rem rgba(#eee, 0.2);
+    }
+  }
+}
+
+.project-files {
+  list-style: none;
+
+  .file {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: $color-blue;
+
+    &:not(:last-child) {
+      margin-right: 0.5em;
+    }
+    i {
+      margin-right: 2px;
+    }
+    a {
+      text-decoration: none;
+      color: #eee;
+    }
+  }
+}
+
+.grid.baile-dos-fios,
+.grid.frevos-de-rua {
+  display: none;
+}

@@ -1,11 +1,21 @@
 .popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(#eee, 0.8);
+  transition: all 0.8s ease;
+}
+
+.popup-box {
   //adicionar min width para que o popup nao fique muito estreito quando a tela diminui
 
   width: 60%;
   height: 50%;
 
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
 

@@ -1,8 +1,11 @@
-var card = document.querySelectorAll('.cards__card');
+const card = document.querySelectorAll('.cards__card');
+const exitSelected = document.querySelectorAll('.exit');
 
 card.forEach(function (element) {
   // selects the popup that refers to the selected card
-  var popupSelected = document.querySelector(`.popup.${element.classList[1]}`);
+  const popupSelected = document.querySelector(
+    `.popup.${element.classList[1]}`
+  );
 
   element.addEventListener('click', function () {
     // open popup when clicked
@@ -10,7 +13,7 @@ card.forEach(function (element) {
   });
 
   // close popup
-  var exitSelected = document.querySelector(`.exit.${element.classList[1]}`);
+  const exitSelected = document.querySelector(`.exit.${element.classList[1]}`);
   exitSelected.addEventListener('click', function () {
     popupSelected.classList.toggle('hidden');
   });
