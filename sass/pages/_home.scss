@@ -7,6 +7,12 @@
   background-size: cover;
   background-position: center 33%;
   height: 100vh;
+
+  @include respond(phone) {
+    background-image: url('../imagens/bg-about.png'),
+      url('../imagens/content4.jpg');
+    background-blend-mode: multiply;
+  }
 }
 
 .home-hero {
@@ -41,6 +47,7 @@
 .info {
   margin: 0 auto;
   height: 90vh;
+  padding: 1rem 0;
 
   background-image: url('../imagens/bg.png'), url('../imagens/content3.jpg');
   background-blend-mode: multiply;
@@ -52,6 +59,12 @@
   gap: 2rem;
   justify-content: center;
   align-items: center;
+
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    width: 100%;
+  }
 }
 
 .footer {

@@ -33,6 +33,12 @@
 
   z-index: 10;
 
+  @include respond(phone) {
+    width: 90%;
+    height: auto;
+    flex-direction: column;
+  }
+
   &__img {
     height: 100%;
     // adicionar min width aqui para a foto não ficar muito estreita quando a tela diminuir
@@ -42,6 +48,10 @@
 
     border-radius: 5px;
     margin-right: 1rem;
+
+    @include respond(phone) {
+      height: 50%;
+    }
 
     & img {
       width: 100%;

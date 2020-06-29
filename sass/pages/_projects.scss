@@ -5,6 +5,10 @@
   background-position: top;
   background-size: cover;
 
+  @include respond(phone) {
+    padding-top: 11rem;
+  }
+
   .grid {
     background-color: rgba(#fff, 0.9);
     padding: 1.5rem 1.5rem;
@@ -54,6 +58,9 @@
     display: inline-block;
     padding: 0.5rem 1rem;
     background-color: $color-blue;
+    @include respond(phone) {
+      margin-top: 0.5rem;
+    }
 
     &:not(:last-child) {
       margin-right: 0.5em;

@@ -8,5 +8,9 @@
 
     // teste de popup
     position: relative;
+
+    @include respond(phone) {
+      padding-top: 10rem;
+    }
   }
 }

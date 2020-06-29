@@ -1,12 +1,13 @@
-.music-main {
-}
-
 .music-about {
   padding-top: 8rem;
   padding-bottom: 2rem;
   background: url(../imagens/bg-about.png) no-repeat;
   background-position: top;
   background-size: cover;
+
+  @include respond(phone) {
+    padding-top: 11rem;
+  }
 
   .link:link,
   .link:visited {
@@ -17,5 +18,11 @@
   .link:hover {
     box-shadow: 0 0.1rem 0.4rem rgba(white, 0.3);
     transform: scale(1.1);
+  }
+
+  .cta-music {
+    @include respond(phone) {
+      font-size: 110%;
+    }
   }
 }

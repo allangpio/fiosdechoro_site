@@ -9,8 +9,19 @@
 html {
   // defines what 1rem is
   font-size: 100%;
+
+  @include respond(phone) {
+    font-size: 70%;
+  }
+
+  @include respond(big-desk) {
+    font-size: 105%;
+  }
 }
 
 body {
   box-sizing: border-box;
+}
+
+@include respond(phone) {
 }

@@ -14,6 +14,9 @@
   &__logo-box {
     width: 10rem;
     display: block;
+    @include respond(phone) {
+      width: 5rem;
+    }
   }
 
   &__logo {
@@ -30,9 +33,6 @@
     align-self: flex-end;
   }
 
-  &__heading-fourth {
-  }
-
   &__list {
     list-style: none;
     &--nav {
@@ -46,6 +46,9 @@
     margin-bottom: 0.3em;
     i {
       margin-right: 0.2rem;
+    }
+    @include respond(phone) {
+      font-size: 0.6rem;
     }
   }
 
@@ -63,34 +66,37 @@
 
   &__copyright-text {
     font-size: 0.8rem;
+    @include respond(phone) {
+      font-size: 0.5rem;
+    }
   }
 }
 
-.form {
-  justify-self: start;
-  display: flex;
-  flex-direction: column;
-  &__input {
-    margin-bottom: 0.2em;
-    font-size: 0.8rem;
-    font-family: Raleway, sans-serif;
-    padding: 0.3em 0.1em;
-    width: 10rem;
-  }
+// .form {
+//   justify-self: start;
+//   display: flex;
+//   flex-direction: column;
+//   &__input {
+//     margin-bottom: 0.2em;
+//     font-size: 0.8rem;
+//     font-family: Raleway, sans-serif;
+//     padding: 0.3em 0.1em;
+//     width: 10rem;
+//   }
 
-  &__label {
-    font-size: 0.8rem;
-    margin-bottom: 0.2em;
-  }
+//   &__label {
+//     font-size: 0.8rem;
+//     margin-bottom: 0.2em;
+//   }
 
-  &__text {
-    margin-bottom: 0.2em;
-    width: 20rem;
-    font-family: Raleway, sans-serif;
-  }
+//   &__text {
+//     margin-bottom: 0.2em;
+//     width: 20rem;
+//     font-family: Raleway, sans-serif;
+//   }
 
-  &__button {
-    width: max-content;
-    padding: 0.2em 0.5em;
-  }
-}
+//   &__button {
+//     width: max-content;
+//     padding: 0.2em 0.5em;
+//   }
+// }

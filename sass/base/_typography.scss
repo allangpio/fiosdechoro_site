@@ -13,6 +13,10 @@ h1,
   font-size: 6rem;
   line-height: 0.85em;
   letter-spacing: 0.07em;
+
+  @include respond(phone) {
+    font-size: 5.3rem;
+  }
 }
 
 h2,

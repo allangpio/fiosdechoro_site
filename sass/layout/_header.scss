@@ -6,6 +6,11 @@
   width: 85%;
   padding-top: 0.75rem;
   margin: 0 auto;
+
+  @include respond(phone) {
+    justify-content: center;
+  }
+
   &__logo-container {
     .logo {
       max-width: 9.5rem;

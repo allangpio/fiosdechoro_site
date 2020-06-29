@@ -1,3 +1,19 @@
+/*
+0 - 600px      phone
+600 - 900px    tablet portrait
+900 - 1200px   tablet landscape
+1200 1800px    is where our normal styles apply
+1800px + -     big screen
+
+$breakpoint argument choices
+- phone
+- tab-port
+- tab-land
+- big-desk
+
+
+ORDER: Base + Typography > general layout + grid > page layout > components
+*/
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,800;1,300;1,400;1,800&family=Yanone+Kaffeesatz:wght@300;500;700&display=swap");
 @-webkit-keyframes fadeIn {
   0% {
@@ -37,6 +53,18 @@ html {
   font-size: 100%;
 }
 
+@media only screen and (max-width: 37.5em) {
+  html {
+    font-size: 70%;
+  }
+}
+
+@media only screen and (min-width: 112.5em) {
+  html {
+    font-size: 105%;
+  }
+}
+
 body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -55,6 +83,13 @@ h1,
   font-size: 6rem;
   line-height: 0.85em;
   letter-spacing: 0.07em;
+}
+
+@media only screen and (max-width: 37.5em) {
+  h1,
+  .heading-primary {
+    font-size: 5.3rem;
+  }
 }
 
 h2,
@@ -153,6 +188,15 @@ p {
   transition: all 0.5s ease;
 }
 
+@media only screen and (hover: none) {
+  .cards__card__img {
+    -webkit-filter: blur(0.1px) brightness(40%);
+            filter: blur(0.1px) brightness(40%);
+    -o-object-position: top;
+       object-position: top;
+  }
+}
+
 .cards__card__text {
   position: absolute;
   text-align: left;
@@ -163,6 +207,12 @@ p {
   opacity: 0;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+}
+
+@media only screen and (hover: none) {
+  .cards__card__text {
+    opacity: 1;
+  }
 }
 
 .cards__card:hover .cards__card__img {
@@ -195,6 +245,12 @@ p {
           backface-visibility: hidden;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .info-card {
+    margin: 0 auto;
+  }
+}
+
 .info-card__icon {
   font-size: 4rem;
   display: block;
@@ -223,10 +279,6 @@ p {
 
 .grid__content--span2 {
   grid-column: span 2;
-}
-
-.grid__content--span4 {
-  grid-column: span 4;
 }
 
 .grid .cards {
@@ -281,11 +333,28 @@ p {
   z-index: 10;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .popup-box {
+    width: 90%;
+    height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .popup-box__img {
   height: 100%;
   overflow: hidden;
   border-radius: 5px;
   margin-right: 1rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .popup-box__img {
+    height: 50%;
+  }
 }
 
 .popup-box__img img {
@@ -352,6 +421,12 @@ p {
   display: block;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .footer__logo-box {
+    width: 5rem;
+  }
+}
+
 .footer__logo {
   width: 100%;
 }
@@ -391,6 +466,12 @@ p {
   margin-right: 0.2rem;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .footer__item {
+    font-size: 0.6rem;
+  }
+}
+
 .footer__link {
   padding-right: 1em;
 }
@@ -409,41 +490,10 @@ p {
   font-size: 0.8rem;
 }
 
-.form {
-  justify-self: start;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.form__input {
-  margin-bottom: 0.2em;
-  font-size: 0.8rem;
-  font-family: Raleway, sans-serif;
-  padding: 0.3em 0.1em;
-  width: 10rem;
-}
-
-.form__label {
-  font-size: 0.8rem;
-  margin-bottom: 0.2em;
-}
-
-.form__text {
-  margin-bottom: 0.2em;
-  width: 20rem;
-  font-family: Raleway, sans-serif;
-}
-
-.form__button {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  padding: 0.2em 0.5em;
+@media only screen and (max-width: 37.5em) {
+  .footer__copyright-text {
+    font-size: 0.5rem;
+  }
 }
 
 .grid {
@@ -456,6 +506,14 @@ p {
   grid-auto-rows: auto;
   grid-gap: 4rem 2.5rem;
   grid-auto-flow: dense;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .grid {
+    -ms-grid-columns: (minmax(12.5rem, 1fr))[2];
+        grid-template-columns: repeat(2, minmax(12.5rem, 1fr));
+    grid-gap: 1rem 0.5rem;
+  }
 }
 
 .grid hr {
@@ -477,6 +535,14 @@ p {
   width: 85%;
   padding-top: 0.75rem;
   margin: 0 auto;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .header {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 .header__logo-container .logo {
@@ -514,6 +580,12 @@ p {
   background-size: cover;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .music-about {
+    padding-top: 11rem;
+  }
+}
+
 .music-about .link:link,
 .music-about .link:visited {
   color: white;
@@ -528,6 +600,12 @@ p {
           transform: scale(1.1);
 }
 
+@media only screen and (max-width: 37.5em) {
+  .music-about .cta-music {
+    font-size: 110%;
+  }
+}
+
 .about-main__section-about {
   padding-top: 6rem;
   padding-bottom: 2rem;
@@ -537,12 +615,25 @@ p {
   position: relative;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .about-main__section-about {
+    padding-top: 10rem;
+  }
+}
+
 .section-header {
   background-image: url("../imagens/bg-1.png"), url("../imagens/content1.jpg");
   background-blend-mode: multiply;
   background-size: cover;
   background-position: center 33%;
   height: 100vh;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .section-header {
+    background-image: url("../imagens/bg-about.png"), url("../imagens/content4.jpg");
+    background-blend-mode: multiply;
+  }
 }
 
 .home-hero {
@@ -580,6 +671,7 @@ p {
 .info {
   margin: 0 auto;
   height: 90vh;
+  padding: 1rem 0;
   background-image: url("../imagens/bg.png"), url("../imagens/content3.jpg");
   background-blend-mode: multiply;
   background-size: cover;
@@ -597,6 +689,15 @@ p {
           align-items: center;
 }
 
+@media only screen and (max-width: 37.5em) {
+  .info {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    gap: 0.5rem;
+    width: 100%;
+  }
+}
+
 .footer {
   height: -webkit-max-content;
   height: -moz-max-content;
@@ -610,6 +711,12 @@ p {
   background: url(../imagens/bg-about.png) no-repeat;
   background-position: top;
   background-size: cover;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .projects {
+    padding-top: 11rem;
+  }
 }
 
 .projects .grid {
@@ -669,6 +776,12 @@ p {
   display: inline-block;
   padding: 0.5rem 1rem;
   background-color: #354b56;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .project-files .file {
+    margin-top: 0.5rem;
+  }
 }
 
 .project-files .file:not(:last-child) {

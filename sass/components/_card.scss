@@ -17,6 +17,10 @@
       object-fit: cover;
       transform: scale(1.08);
       transition: all 0.5s ease;
+      @media only screen and (hover: none) {
+        filter: blur(0.1px) brightness(40%);
+        object-position: top;
+      }
     }
 
     &__text {
@@ -27,6 +31,10 @@
       transform: translate(-50%, -20%);
       opacity: 0;
       transition: all 0.5s ease;
+
+      @media only screen and (hover: none) {
+        opacity: 1;
+      }
     }
 
     &:hover &__img {
@@ -55,6 +63,10 @@
   padding: 2rem 1rem;
   transition: all 0.3s ease;
   backface-visibility: hidden;
+
+  @include respond(phone) {
+    margin: 0 auto;
+  }
 
   &__icon {
     // height: 6rem;
