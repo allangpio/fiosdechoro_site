@@ -7,10 +7,8 @@
   grid-auto-rows: auto;
   grid-gap: 4rem 2.5rem;
 
-  grid-auto-flow: dense;
-
   @include respond(phone) {
-    grid-template-columns: repeat(2, minmax(12.5rem, 1fr));
+    grid-template-columns: repeat(2, minmax(10rem, 1fr));
     grid-gap: 1rem 0.5rem;
   }
 

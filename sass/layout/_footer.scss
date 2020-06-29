@@ -4,6 +4,10 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+
+  @include respond(phone) {
+    justify-content: space-between;
+  }
   // display: grid;
   // grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   // gap: 5rem;
@@ -16,6 +20,7 @@
     display: block;
     @include respond(phone) {
       width: 5rem;
+      display: none;
     }
   }
 
@@ -68,6 +73,7 @@
     font-size: 0.8rem;
     @include respond(phone) {
       font-size: 0.5rem;
+      line-height: 1.5em;
     }
   }
 }

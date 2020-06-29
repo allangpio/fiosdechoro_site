@@ -4,6 +4,12 @@
   padding-top: 4rem;
   overflow: hidden;
 
+  @include respond(phone) {
+    width: 11rem;
+    height: 21rem;
+    margin-top: -3rem;
+  }
+
   &__card {
     border-radius: 5px;
     position: relative;
@@ -18,7 +24,7 @@
       transform: scale(1.08);
       transition: all 0.5s ease;
       @media only screen and (hover: none) {
-        filter: blur(0.1px) brightness(40%);
+        filter: brightness(40%);
         object-position: top;
       }
     }

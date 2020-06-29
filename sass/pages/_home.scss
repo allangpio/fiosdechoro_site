@@ -26,6 +26,10 @@
     top: 40%;
     left: 55%;
     transform: translate(-50%, -50%);
+
+    @include respond(phone) {
+      left: 50%;
+    }
     & h1 {
       animation: fadeIn 1.5s ease-in backwards;
       backface-visibility: hidden;
@@ -64,6 +68,7 @@
     grid-template-columns: 1fr;
     gap: 0.5rem;
     width: 100%;
+    height: auto;
   }
 }
 
