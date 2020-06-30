@@ -70,7 +70,7 @@
   transition: all 0.3s ease;
   backface-visibility: hidden;
 
-  @include respond(phone) {
+  @include respond(tab-port) {
     margin: 0 auto;
   }
 

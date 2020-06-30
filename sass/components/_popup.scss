@@ -1,9 +1,9 @@
 .popup {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-color: rgba(#eee, 0.8);
   transition: all 0.8s ease;
 }
@@ -11,36 +11,40 @@
 .popup-box {
   //adicionar min width para que o popup nao fique muito estreito quando a tela diminui
 
-  width: 60%;
+  width: 50%;
   height: 50%;
 
   position: absolute;
-  top: 60%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 
   color: $color-blue;
 
-  padding: 1em;
+  padding: 1.5em 1em 1em 1em;
 
   background-color: rgba(#eee, 1);
   box-shadow: 0 1rem 2rem rgba(#333, 0.9);
   border-radius: 5px;
-  overflow: hidden;
+  overflow: scroll;
 
   display: flex;
   align-items: center;
 
   z-index: 10;
 
-  @include respond(phone) {
+  @include respond(tab-port) {
     width: 90%;
-    height: auto;
+    height: 90%;
+  }
+
+  @include respond(phone) {
     flex-direction: column;
   }
 
   &__img {
     height: 100%;
+    min-width: 13rem;
     // adicionar min width aqui para a foto não ficar muito estreita quando a tela diminuir
     // min-width: 15rem;
 
@@ -64,8 +68,9 @@
   }
 
   &__text {
-    height: 100%;
+    // height: 100%;
     margin-right: 1rem;
+    overflow: scroll;
 
     & h3 {
       font-size: 2rem;

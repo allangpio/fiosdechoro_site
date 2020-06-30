@@ -9,7 +9,7 @@
     // teste de popup
     position: relative;
 
-    @include respond(phone) {
+    @include respond(tab-port) {
       padding-top: 10rem;
     }
   }
