@@ -525,7 +525,7 @@ p {
 @media only screen and (max-width: 62.5em) {
   .popup-box {
     width: 90%;
-    height: 90%;
+    height: auto;
   }
 }
 

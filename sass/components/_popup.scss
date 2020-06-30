@@ -35,7 +35,7 @@
 
   @include respond(tab-port) {
     width: 90%;
-    height: 90%;
+    height: auto;
   }
 
   @include respond(phone) {
