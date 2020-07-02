@@ -7,7 +7,8 @@
   padding-top: 0.75rem;
   margin: 0 auto;
 
-  @include respond(phone) {
+  @include respond(tab-port) {
+    flex-direction: column;
     justify-content: center;
   }
 
@@ -21,11 +22,20 @@
       display: flex;
       list-style: none;
       padding-bottom: 0.8rem;
-      &__link a {
+
+      &__link a,
+      &__link a:link,
+      &__link a:visited {
         text-decoration: none;
         font-size: 1rem;
         color: white;
-        padding: 0 1em;
+        border-radius: 8px;
+        overflow: hidden;
+        padding: 0.3em 1.2em;
+        z-index: 100;
+        cursor: pointer;
+
+        position: relative;
         @include respond(phone) {
           &:first-child {
             padding: 0 1em 0 0;
@@ -34,6 +44,33 @@
             padding: 0 0 0 1em;
           }
         }
+      }
+
+      &__link a::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        border-radius: 8px;
+        overflow: hidden;
+        background-color: rgba(white, 0.9);
+        z-index: -1;
+        transform: scaleX(0);
+        transition: transform 0.2s, height cubic-bezier(1, 0, 0, 1) 0.4s 0.2s,
+          background-color 0.1s;
+      }
+
+      &__link a:hover::before,
+      &__link a:active::before {
+        transform: scaleX(1);
+        height: 100%;
+      }
+
+      &__link a:hover {
+        color: $color-red;
+        z-index: 20;
       }
     }
   }

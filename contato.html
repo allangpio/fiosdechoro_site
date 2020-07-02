@@ -50,17 +50,26 @@
     <section class="contact">
       <div class="form-container">
         <h3 class="heading-tertiary u-margin-bottom-sm">Fale com o Fios</h3>
-        <form
-          method="GET"
-          action="mailto:gpioallan@gmail.com"
-          enctype="text/plain"
-          class="form"
-        >
+        <form id="contact">
           <label for="name" class="form__label">Nome</label>
-          <input type="text" name="name" class="form__input" />
+          <input
+            type="text"
+            name="name"
+            class="form__input"
+            id="name"
+            required
+          />
           <label for="email" class="form__label">Email</label>
-          <input type="email" name="email" class="form__input" />
-          <label for="message" class="form__label">Comentários</label>
+          <input
+            type="email"
+            name="email"
+            class="form__input"
+            id="email"
+            required
+          />
+          <label for="message" class="form__label" id="message">
+            Comentários
+          </label>
           <textarea
             name="message"
             id="message"
@@ -69,7 +78,7 @@
             class="form__text"
           ></textarea>
 
-          <button class="form__button">Enviar</button>
+          <button type="submit" class="form__button">Enviar</button>
         </form>
       </div>
     </section>

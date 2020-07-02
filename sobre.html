@@ -20,7 +20,9 @@
   <body>
     <header class="header header--about">
       <div class="header__logo-container">
-        <img class="logo" src="imagens/fios_branco.png" alt="Logo Fios" />
+        <a href="index.html">
+          <img class="logo" src="imagens/fios_branco.png" alt="Logo Fios" />
+        </a>
       </div>
 
       <nav class="nav">
@@ -37,8 +39,8 @@
           <li class="nav__links__link">
             <a href="projetos.html">Projetos</a>
           </li>
-          <li class="nav__links__link">
-            <a href="#contato">Contato</a>
+          <li id="smooth-btn" class="nav__links__link">
+            <a>Contato</a>
           </li>
         </ul>
       </nav>
@@ -52,7 +54,11 @@
           </div>
 
           <div class="grid__content--span2 img-container">
-            <img src="imagens/content4.jpg" alt="Foto Fios de Choro" />
+            <picture>
+              <source srcset="imagens/grupo.jpg" media="(max-width: 1000px)" />
+              <img src="imagens/content4.jpg" alt="Foto Fios de Choro" />
+            </picture>
+            <!-- <img src="imagens/content4.jpg" alt="Foto Fios de Choro" /> -->
           </div>
 
           <div class="grid__content--span2">

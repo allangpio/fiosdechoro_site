@@ -4,15 +4,19 @@
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: rgba(#eee, 0.8);
-  transition: all 0.8s ease;
+
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+  transform-origin: center;
+  transition: all 0.2s ease;
 }
 
 .popup-box {
   //adicionar min width para que o popup nao fique muito estreito quando a tela diminui
 
-  width: 50%;
-  height: 50%;
+  min-width: 60%;
+  height: auto;
 
   position: absolute;
   top: 50%;
@@ -26,7 +30,6 @@
   background-color: rgba(#eee, 1);
   box-shadow: 0 1rem 2rem rgba(#333, 0.9);
   border-radius: 5px;
-  overflow: scroll;
 
   display: flex;
   align-items: center;
@@ -44,7 +47,8 @@
 
   &__img {
     height: 100%;
-    min-width: 13rem;
+    flex: 0 0 13rem;
+    // min-width: 13rem;
     // adicionar min width aqui para a foto não ficar muito estreita quando a tela diminuir
     // min-width: 15rem;
 
@@ -54,8 +58,9 @@
     margin-right: 1rem;
 
     @include respond(phone) {
-      height: 18rem;
-      width: 90%;
+      // height: 18rem;
+      // width: 90%;
+      flex: 0 0 20rem;
       margin-bottom: 0.5rem;
     }
 
@@ -69,8 +74,8 @@
 
   &__text {
     // height: 100%;
+    flex: 1;
     margin-right: 1rem;
-    overflow: scroll;
 
     & h3 {
       font-size: 2rem;
@@ -87,5 +92,65 @@
 }
 
 .hidden {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0.9);
+  transform-origin: center;
+}
+
+.popup-promo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  height: 100vh;
+  width: 100%;
+
+  background-color: rgba(0, 0, 0, 0.3);
+  // visibility: hidden;
+  // opacity: 0;
+  transition: visibility 0s, opacity 0.5s;
+}
+
+.popup-promo-active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup-promo-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  height: 60vh;
+  width: 55vh;
+
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: rgba($color-blue, 0.9);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__img {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: -1rem;
+
+    & img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &__exit {
+    position: absolute;
+    top: 0;
+    right: 0.3rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
 }

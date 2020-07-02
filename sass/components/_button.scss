@@ -28,4 +28,10 @@
     background-color: $color-blue;
     color: white;
   }
+
+  &--yellow:link,
+  &--yellow:visited {
+    background-color: $color-yellow;
+    color: $color-blue;
+  }
 }

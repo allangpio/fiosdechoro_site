@@ -24,7 +24,9 @@
     <div class="section-header">
       <header class="header">
         <div class="header__logo-container">
-          <img class="logo" src="imagens/fios_branco.png" alt="Logo Fios" />
+          <a href="#">
+            <img class="logo" src="imagens/fios_branco.png" alt="Logo Fios" />
+          </a>
         </div>
 
         <nav class="nav">
@@ -41,8 +43,8 @@
             <li class="nav__links__link">
               <a href="projetos.html">Projetos</a>
             </li>
-            <li class="nav__links__link">
-              <a href="#contato">Contato</a>
+            <li id="smooth-btn" class="nav__links__link">
+              <a>Contato</a>
             </li>
           </ul>
         </nav>
@@ -161,7 +163,7 @@
         </div>
       </div>
 
-      <!-- teste de popup -->
+      <!-- POPUPS -->
       <div class="popup hidden wanessa">
         <div class="popup-box">
           <div class="popup-box__img">
@@ -180,7 +182,6 @@
             </p>
           </div>
           <p class="popup-box__exit exit wanessa">x</p>
-          <!-- <h1 class="exit wanessa">X</h1> -->
         </div>
       </div>
 
@@ -204,7 +205,6 @@
             </p>
           </div>
           <p class="popup-box__exit exit joao">x</p>
-          <!-- <h1 class="exit wanessa">X</h1> -->
         </div>
       </div>
 
@@ -228,7 +228,6 @@
             </p>
           </div>
           <p class="popup-box__exit exit allan">x</p>
-          <!-- <h1 class="exit wanessa">X</h1> -->
         </div>
       </div>
 
@@ -254,15 +253,12 @@
             </p>
           </div>
           <p class="popup-box__exit exit igor">x</p>
-          <!-- <h1 class="exit wanessa">X</h1> -->
         </div>
       </div>
     </section>
 
-    
-
     <section class="info">
-      <div class="info-card">
+      <div id="info-card-left" class="info-card fade-left">
         <i class="info-card__icon icon-basic-todolist-pen"></i>
         <p class="info-card__text">
           Atualmente o Fios está com 3 projetos ativos: TRAMA, Frevos de Rua e
@@ -273,7 +269,7 @@
         </a>
       </div>
 
-      <div class="info-card">
+      <div id="info-card-right" class="info-card fade-right">
         <i class="info-card__icon icon-basic-video"></i>
 
         <p class="info-card__text">
@@ -286,7 +282,7 @@
       </div>
     </section>
 
-    <footer class="footer" id='contato'>
+    <footer class="footer" id="contato">
       <div class="footer__info">
         <h3 class="heading-tertiary u-margin-bottom-sm">Contato</h3>
         <ul class="footer__list">
@@ -298,10 +294,11 @@
             <i class="icon-basic-smartphone"></i>
             (11) 96350-0589
           </li>
-          <li class="footer__item"><a href="mailto:producaofiosdechoro@gmail.com">
-            <i class="icon-basic-mail"></i>
-            producaofiosdechoro@gmail.com
-          </a>
+          <li class="footer__item">
+            <a href="mailto:producaofiosdechoro@gmail.com">
+              <i class="icon-basic-mail"></i>
+              producaofiosdechoro@gmail.com
+            </a>
           </li>
         </ul>
         <ul class="footer__list footer__list--nav">
@@ -354,43 +351,24 @@
         <p class="footer__copyright-text">
           Copyright &copy; Fios de Choro 2020
           <br />
-          Feito por: &copy; Allan Gaia Pio          
+          Feito por: &copy; Allan Gaia Pio
         </p>
       </div>
-
-      <!-- <div class="footer__contact">
-        <h3 class="heading-tertiary">Fale com o Fios</h3>
-        <form action="#" class="form">
-          <label for="name" class="form__label">Nome</label>
-          <input type="text" name="name" class="form__input" />
-          <label for="message" class="form__label">Comentários</label>
-          <textarea
-            name="message"
-            id="message"
-            cols="20"
-            rows="3"
-            class="form__text"
-          ></textarea>
-
-          <button class="form__button">Enviar</button>
-        </form>
-      </div> -->
     </footer>
 
-
-    <div class="popup hidden popup-promo">
-      <div class="popup-box">
-        <div class="popup-box__img">
-          <img src="imagens/popup-img.JPG" alt="Cartaz de apresentação" />
-        </div>
-        <div class="popup-box__text">
-          <a href="#" class="btn btn--secondary btn-small btn--blue">
-            Garantir ingresso!
-          </a>
-        </div>
-        <p class="popup-box__exit exit igor">x</p>
-        <!-- <h1 class="exit wanessa">X</h1> -->
-      </div>
+    <!--     
+      <div class="popup-promo popup ">
+        <div class=" popup-promo-box">
+          <div class="popup-promo-box__img">
+            <img src="imagens/popup-img.JPG" alt="Cartaz de apresentação" />
+          </div>
+          <div class="popup-promo-box__text">
+            <a href="musica.html" class="btn btn--secondary btn-small btn--yellow">
+              Garantir ingresso!
+            </a>
+          </div>
+          <p class="popup-promo-box__exit">x</p>          
+        </div> -->
 
     <script src="index.js"></script>
   </body>

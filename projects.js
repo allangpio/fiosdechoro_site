@@ -1,8 +1,6 @@
 const project = document.querySelectorAll('.grid');
-console.log(project);
 
 const projectNav = document.querySelectorAll('.nav-items');
-console.log(projectNav);
 
 projectNav.forEach(function (element) {
   element.addEventListener('click', function () {

@@ -96,3 +96,25 @@
     box-shadow: 0 0.6rem 1rem rgba(#ccc, 0.5);
   }
 }
+
+#info-card-right {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: all 1s ease-in;
+}
+
+#info-card-left {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all 1s ease-in-out;
+}
+
+.info-appear {
+  opacity: 1 !important;
+  transform: translateX(0px) !important;
+}
+
+.info-appear-left {
+  opacity: 1;
+  transform: translateX(0px);
+}
