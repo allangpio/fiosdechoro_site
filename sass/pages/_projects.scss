@@ -5,8 +5,8 @@
   background-position: top;
   background-size: cover;
 
-  @include respond(phone) {
-    padding-top: 11rem;
+  @include respond(tab-port) {
+    padding-top: 10rem;
   }
 
   .grid {
@@ -35,7 +35,7 @@
   display: flex;
   justify-content: space-between;
   width: 80vw;
-  margin: 0 auto 3rem auto;
+  margin: 0 auto 2rem auto;
 
   .nav-items {
     cursor: pointer;
@@ -57,6 +57,7 @@
   .file {
     display: inline-block;
     padding: 0.5rem 1rem;
+    margin-top: 0.5rem;
     background-color: $color-blue;
     @include respond(phone) {
       margin-top: 0.5rem;

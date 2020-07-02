@@ -62,8 +62,7 @@
           background-color 0.1s;
       }
 
-      &__link a:hover::before,
-      &__link a:active::before {
+      &__link a:hover::before {
         transform: scaleX(1);
         height: 100%;
       }

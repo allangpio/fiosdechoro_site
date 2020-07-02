@@ -10,6 +10,10 @@ html {
   // defines what 1rem is
   font-size: 100%;
 
+  @media only screen and (max-width: 62.5em) and (orientation: landscape) {
+    font-size: 75%;
+  }
+
   @include respond(phone) {
     font-size: 80%;
   }
@@ -21,7 +25,4 @@ html {
 
 body {
   box-sizing: border-box;
-}
-
-@include respond(phone) {
 }

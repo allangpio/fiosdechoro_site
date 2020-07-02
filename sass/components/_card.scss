@@ -57,7 +57,9 @@
 
 .info-card {
   height: 23rem;
-  width: 19rem;
+  min-width: 17rem;
+  max-width: 19rem;
+
   background-color: rgba(#eee, 0.85);
 
   border-radius: 8px;

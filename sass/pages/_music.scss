@@ -5,8 +5,8 @@
   background-position: top;
   background-size: cover;
 
-  @include respond(phone) {
-    padding-top: 11rem;
+  @include respond(tab-port) {
+    padding-top: 10rem;
   }
 
   .link:link,

@@ -16,3 +16,12 @@
     color: #aaa;
   }
 }
+
+.projects-main {
+  .grid {
+    @include respond(tab-land) {
+      grid-template-columns: repeat(2, minmax(10rem, 1fr)) !important;
+      grid-gap: 1rem 0.5rem !important;
+    }
+  }
+}
