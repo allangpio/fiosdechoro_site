@@ -69,7 +69,7 @@
 
   text-align: center;
   padding: 2rem 1rem;
-  transition: all 0.3s ease;
+  transition: all 1s ease;
   backface-visibility: hidden;
 
   @include respond(tab-port) {
@@ -99,24 +99,19 @@
   }
 }
 
-#info-card-right {
-  opacity: 0;
-  transform: translateX(20px);
-  transition: all 1s ease-in;
-}
+// #info-card-right {
+//   opacity: 0;
+//   transform: translateY(-20px);
+//   transition: all 1s ease-in;
+// }
 
-#info-card-left {
-  opacity: 0;
-  transform: translateX(-20px);
-  transition: all 1s ease-in-out;
-}
+// #info-card-left {
+//   opacity: 0;
+//   transform: translateX(-20px);
+//   transition: all 1s ease-in-out;
+// }
 
-.info-appear {
+.appear {
   opacity: 1 !important;
-  transform: translateX(0px) !important;
-}
-
-.info-appear-left {
-  opacity: 1;
-  transform: translateX(0px);
+  transform: translateY(0px);
 }

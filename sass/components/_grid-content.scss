@@ -23,7 +23,7 @@
   }
 }
 
-@include respond(phone) {
+@include respond(tab-port) {
   .order-0 {
     order: 0;
   }

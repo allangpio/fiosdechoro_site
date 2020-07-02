@@ -259,8 +259,8 @@ p {
           box-shadow: 0 0.5rem 1rem rgba(51, 51, 51, 0.4);
   text-align: center;
   padding: 2rem 1rem;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
 }
@@ -293,32 +293,10 @@ p {
           box-shadow: 0 0.6rem 1rem rgba(204, 204, 204, 0.5);
 }
 
-#info-card-right {
-  opacity: 0;
-  -webkit-transform: translateX(20px);
-          transform: translateX(20px);
-  -webkit-transition: all 1s ease-in;
-  transition: all 1s ease-in;
-}
-
-#info-card-left {
-  opacity: 0;
-  -webkit-transform: translateX(-20px);
-          transform: translateX(-20px);
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
-}
-
-.info-appear {
+.appear {
   opacity: 1 !important;
-  -webkit-transform: translateX(0px) !important;
-          transform: translateX(0px) !important;
-}
-
-.info-appear-left {
-  opacity: 1;
-  -webkit-transform: translateX(0px);
-          transform: translateX(0px);
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
 }
 
 .form-container {
@@ -454,7 +432,7 @@ p {
      object-position: center 5%;
 }
 
-@media only screen and (max-width: 37.5em) {
+@media only screen and (max-width: 62.5em) {
   .order-0 {
     -webkit-box-ordinal-group: 1;
         -ms-flex-order: 0;
@@ -909,19 +887,6 @@ p {
   position: relative;
 }
 
-@media only screen and (max-width: 37.5em) {
-  .header .nav__links__link a:first-child,
-  .header .nav__links__link a:link:first-child,
-  .header .nav__links__link a:visited:first-child {
-    padding: 0 1em 0 0;
-  }
-  .header .nav__links__link a:last-child,
-  .header .nav__links__link a:link:last-child,
-  .header .nav__links__link a:visited:last-child {
-    padding: 0 0 0 1em;
-  }
-}
-
 .header .nav__links__link a::before {
   content: '';
   position: absolute;
@@ -955,9 +920,11 @@ p {
 .header--about {
   position: absolute;
   top: 0;
-  left: 5vw;
+  left: 50%;
   width: 85vw;
   z-index: 10;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .music-about {
@@ -992,6 +959,14 @@ p {
   .music-about .cta-music {
     font-size: 110%;
   }
+}
+
+.text-appear {
+  opacity: 0;
+  -webkit-transform: translateY(-1rem);
+          transform: translateY(-1rem);
+  -webkit-transition: all 1s ease-in;
+  transition: all 1s ease-in;
 }
 
 .contact {

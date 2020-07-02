@@ -41,19 +41,22 @@ smoothBtn.addEventListener('click', function () {
 });
 
 ////////////////////////////////////////
-///  FUNCTION TO MAKE THE INFO CARDS APPEAR ON SCROLL
+///  FUNCTION TO FADE-IN TEXTS OF THE MUSIC SECTION
 
-function scrollAppear() {
-  const infoLeft = document.querySelector('#info-card-left');
-  const infoRight = document.querySelector('#info-card-right');
+function scrollAppear(selector) {
+  const items = document.querySelectorAll(selector);
 
-  let infoPosition = infoLeft.getBoundingClientRect().top;
-  let screenPosition = window.innerHeight;
+  items.forEach(function (item) {
+    let itemPosition = item.getBoundingClientRect().top;
+    let screenPosition = window.innerHeight;
 
-  if (infoPosition < screenPosition) {
-    infoLeft.classList.add('info-appear');
-    infoRight.classList.add('info-appear');
-  }
+    if (itemPosition < screenPosition) {
+      item.style.opacity = '1';
+      item.style.transform = 'translateY(0)';
+    }
+  });
 }
 
-window.addEventListener('scroll', scrollAppear);
+window.addEventListener('scroll', function () {
+  scrollAppear('.text-appear');
+});
