@@ -60,3 +60,21 @@ function scrollAppear(selector) {
 window.addEventListener('scroll', function () {
   scrollAppear('.text-appear');
 });
+
+//////////////////////////////////
+/// BURGUER MENU
+
+const navSlide = () => {
+  const burguer = document.querySelector('.burguer');
+  const nav = document.querySelector('.nav__links');
+
+  // toggle nav
+  burguer.addEventListener('click', () => {
+    nav.classList.toggle('burguer-active');
+
+    // BURGUER ANIMATION
+    burguer.classList.toggle('toggle');
+  });
+};
+
+navSlide();

@@ -7,11 +7,6 @@
   padding-top: 0.75rem;
   margin: 0 auto;
 
-  @include respond(tab-port) {
-    flex-direction: column;
-    justify-content: center;
-  }
-
   &__logo-container {
     .logo {
       max-width: 9.5rem;
@@ -22,6 +17,32 @@
       display: flex;
       list-style: none;
       padding-bottom: 0.8rem;
+      position: relative;
+
+      ///////////////////////////////
+      /// start the hambuguer styles
+      @include respond(tab-land) {
+        position: fixed;
+
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 30vw;
+        background-color: rgba($color-blue, 0.95);
+        z-index: 9;
+
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 15vh 0 15vh 0;
+
+        transform: translateX(100%);
+        opacity: 0;
+
+        transition: all 0.5s ease-in;
+      }
+      /// end the hambuguer styles
+      ///////////////////////////////
 
       &__link a,
       &__link a:link,
@@ -52,6 +73,10 @@
         transform: scaleX(0);
         transition: transform 0.2s, height cubic-bezier(1, 0, 0, 1) 0.4s 0.2s,
           background-color 0.1s;
+
+        @media only screen and (hover: none) {
+          display: none;
+        }
       }
 
       &__link a:hover::before {
@@ -67,11 +92,53 @@
   }
 
   &--about {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 85vw;
-    z-index: 10;
-    transform: translateX(-50%);
+    background-color: $color-blue;
+    width: 100%;
+    padding: 0.7rem 7.5vw;
   }
+}
+
+////////////////////
+// burguer style
+.burguer {
+  display: none;
+  position: fixed;
+  top: 1.65vh;
+  right: 5vw;
+  z-index: 10;
+
+  & div {
+    width: 22.5px;
+    height: 2px;
+    background-color: #fff;
+    margin: 0.5rem;
+
+    transition: transform 0.5s ease;
+  }
+
+  @include respond(tab-land) {
+    padding: 0.5rem 0;
+    display: block;
+    cursor: pointer;
+  }
+}
+
+.burguer-active {
+  transform: translateX(0) !important;
+  opacity: 1 !important;
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0 !important;
+}
+
+.toggle .line3 {
+  @media only screen and (min-width: 37.51em) {
+    transform: rotate(45deg) translate(-8px, -9px);
+  }
+  transform: rotate(45deg) translate(-5px, -6px);
 }

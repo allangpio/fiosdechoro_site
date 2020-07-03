@@ -1,13 +1,9 @@
 .music-about {
-  padding-top: 8rem;
+  padding-top: 2rem;
   padding-bottom: 2rem;
   background: url(../imagens/bg-about.png) no-repeat;
   background-position: top;
   background-size: cover;
-
-  @include respond(tab-port) {
-    padding-top: 10rem;
-  }
 
   .link:link,
   .link:visited {

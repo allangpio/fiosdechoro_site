@@ -1,16 +1,12 @@
 .about-main {
   &__section-about {
-    padding-top: 6rem;
+    padding-top: 2rem;
     padding-bottom: 2rem;
     background: url(../imagens/bg-about.png) no-repeat;
     background-position: top;
     background-size: cover;
 
-    // teste de popup
+    // popup
     position: relative;
-
-    @include respond(tab-port) {
-      padding-top: 10rem;
-    }
   }
 }
