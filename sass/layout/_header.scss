@@ -7,10 +7,10 @@
   padding-top: 0.75rem;
   margin: 0 auto;
 
-  @include respond(tab-port) {
-    flex-direction: column;
-    justify-content: center;
-  }
+  // @include respond(tab-port) {
+  //   flex-direction: column;
+  //   justify-content: center;
+  // }
 
   &__logo-container {
     .logo {
@@ -18,10 +18,49 @@
     }
   }
   .nav {
+    // @include respond(tab-land) {
+    //   position: fixed;
+
+    //   top: 0;
+    //   right: 0;
+    //   height: 100vh;
+    //   width: 30vw;
+    //   transform: translateX(100%);
+    //   opacity: 0;
+
+    //   transition: all 0.5s ease-in;
+    // }
+
     &__links {
       display: flex;
       list-style: none;
       padding-bottom: 0.8rem;
+      position: relative;
+
+      ///////////////////////////////
+      /// start the hambuguer styles
+      @include respond(tab-land) {
+        position: fixed;
+
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: 30vw;
+        background-color: rgba($color-blue, 0.95);
+        z-index: 9;
+
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding: 15vh 0 15vh 0;
+
+        transform: translateX(100%);
+        opacity: 0;
+
+        transition: all 0.5s ease-in;
+      }
+      /// end the hambuguer styles
+      ///////////////////////////////
 
       &__link a,
       &__link a:link,
@@ -74,4 +113,47 @@
     z-index: 10;
     transform: translateX(-50%);
   }
+}
+
+////////////////////
+// burguer style
+.burguer {
+  display: none;
+  position: fixed;
+  top: 1.65vh;
+  right: 5vw;
+  z-index: 10;
+
+  & div {
+    width: 22.5px;
+    height: 2px;
+    background-color: #fff;
+    margin: 0.5rem;
+
+    // transform: translate(-50%, -50%);
+  }
+
+  @include respond(tab-land) {
+    padding: 0.5rem 0;
+    display: block;
+    cursor: pointer;
+  }
+}
+
+.burguer-active {
+  transform: translateX(0) !important;
+  opacity: 1 !important;
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg translate(-5px, 6px));
+}
+
+// .toggle,
+// .line2 {
+//   opacity: 0 !important;
+// }
+
+.toggle .line3 {
+  transform: rotate(-45deg translate(-5px, -6px));
 }
