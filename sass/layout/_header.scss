@@ -7,30 +7,12 @@
   padding-top: 0.75rem;
   margin: 0 auto;
 
-  // @include respond(tab-port) {
-  //   flex-direction: column;
-  //   justify-content: center;
-  // }
-
   &__logo-container {
     .logo {
       max-width: 9.5rem;
     }
   }
   .nav {
-    // @include respond(tab-land) {
-    //   position: fixed;
-
-    //   top: 0;
-    //   right: 0;
-    //   height: 100vh;
-    //   width: 30vw;
-    //   transform: translateX(100%);
-    //   opacity: 0;
-
-    //   transition: all 0.5s ease-in;
-    // }
-
     &__links {
       display: flex;
       list-style: none;
@@ -91,6 +73,10 @@
         transform: scaleX(0);
         transition: transform 0.2s, height cubic-bezier(1, 0, 0, 1) 0.4s 0.2s,
           background-color 0.1s;
+
+        @media only screen and (hover: none) {
+          display: none;
+        }
       }
 
       &__link a:hover::before {
@@ -106,12 +92,9 @@
   }
 
   &--about {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 85vw;
-    z-index: 10;
-    transform: translateX(-50%);
+    background-color: $color-blue;
+    width: 100%;
+    padding: 0.7rem 7.5vw;
   }
 }
 
@@ -130,7 +113,7 @@
     background-color: #fff;
     margin: 0.5rem;
 
-    // transform: translate(-50%, -50%);
+    transition: transform 0.5s ease;
   }
 
   @include respond(tab-land) {
@@ -146,14 +129,16 @@
 }
 
 .toggle .line1 {
-  transform: rotate(-45deg translate(-5px, 6px));
+  transform: rotate(-45deg) translate(-5px, 6px);
 }
 
-// .toggle,
-// .line2 {
-//   opacity: 0 !important;
-// }
+.toggle .line2 {
+  opacity: 0 !important;
+}
 
 .toggle .line3 {
-  transform: rotate(-45deg translate(-5px, -6px));
+  @media only screen and (min-width: 37.51em) {
+    transform: rotate(45deg) translate(-8px, -9px);
+  }
+  transform: rotate(45deg) translate(-5px, -6px);
 }
