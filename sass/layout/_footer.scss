@@ -47,25 +47,33 @@
     list-style: none;
     &--nav {
       display: flex;
-      padding-top: 0.3em;
+      padding-top: 0.6em;
+
+      align-items: center;
     }
   }
 
   &__item {
-    font-size: 0.9rem;
-    margin-bottom: 0.3em;
-    i {
-      margin-right: 0.2rem;
-    }
+    font-size: 1rem;
+
+    margin-bottom: 0.4em;
     @include respond(phone) {
       font-size: 0.6rem;
     }
   }
 
+  &__icon {
+    width: 0.9rem;
+    height: 0.9rem;
+    margin-right: 0.3rem;
+    transform: translateY(3px);
+  }
+
   &__link {
     padding-right: 1em;
+
     &__icon {
-      width: 1.2rem;
+      width: 2rem;
     }
   }
 
