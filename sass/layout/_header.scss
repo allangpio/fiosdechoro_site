@@ -107,6 +107,12 @@
   right: 5vw;
   z-index: 10;
 
+  @include respond(tab-land) {
+    padding: 0.5rem 0;
+    display: block;
+    cursor: pointer;
+  }
+
   & div {
     width: 2rem;
     height: 2px;
@@ -117,12 +123,6 @@
 
     transition: transform 0.5s ease;
   }
-
-  @include respond(tab-land) {
-    padding: 0.5rem 0;
-    display: block;
-    cursor: pointer;
-  }
 }
 
 .burguer-active {
@@ -131,7 +131,8 @@
 }
 
 .toggle .line1 {
-  transform: rotate(-45deg) translate(-5px, 6px);
+  margin: 0;
+  transform: rotate(-45deg) translate(-6px, 6px);
 }
 
 .toggle .line2 {
@@ -139,8 +140,6 @@
 }
 
 .toggle .line3 {
-  @media only screen and (min-width: 37.51em) {
-    transform: rotate(45deg) translate(-8px, -9px);
-  }
+  margin: 0;
   transform: rotate(45deg) translate(-5px, -6px);
 }

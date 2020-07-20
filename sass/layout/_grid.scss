@@ -9,7 +9,7 @@
 
   @include respond(tab-port) {
     grid-template-columns: repeat(2, minmax(10rem, 1fr));
-    grid-gap: 1rem 0.5rem;
+    grid-gap: 2rem 0.5rem;
   }
 
   hr {
