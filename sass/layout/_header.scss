@@ -108,10 +108,12 @@
   z-index: 10;
 
   & div {
-    width: 22.5px;
+    width: 2rem;
     height: 2px;
     background-color: #fff;
     margin: 0.5rem;
+
+    backface-visibility: hidden;
 
     transition: transform 0.5s ease;
   }
