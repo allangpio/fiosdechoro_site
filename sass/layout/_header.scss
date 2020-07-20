@@ -107,21 +107,48 @@
   right: 5vw;
   z-index: 10;
 
-  & div {
-    width: 2rem;
-    height: 2px;
-    background-color: #fff;
-    margin: 0.5rem;
-
-    backface-visibility: hidden;
-
-    transition: transform 0.5s ease;
-  }
-
   @include respond(tab-land) {
     padding: 0.5rem 0;
     display: block;
     cursor: pointer;
+  }
+
+  &__icon,
+  &__icon::before,
+  &__icon::after {
+    width: 2rem;
+    height: 2px;
+    background-color: white;
+    display: block;
+    backface-visibility: hidden;
+  }
+
+  &__icon::before,
+  &__icon::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    transition: all 0.2s;
+  }
+
+  &__icon::before {
+    top: -0.1rem;
+  }
+
+  &__icon::after {
+    top: 1.1rem;
+  }
+
+  &__icon:hover {
+    &::before {
+      top: 0;
+      transform: rotate(135deg);
+    }
+
+    &::after {
+      top: 0;
+      transform: rotate(-135deg);
+    }
   }
 }
 
@@ -130,17 +157,17 @@
   opacity: 1 !important;
 }
 
-.toggle .line1 {
-  transform: rotate(-45deg) translate(-5px, 6px);
-}
+// .toggle .line1 {
+//   transform: rotate(-45deg) translate(-5px, 6px);
+// }
 
-.toggle .line2 {
-  opacity: 0 !important;
-}
+// .toggle .line2 {
+//   opacity: 0 !important;
+// }
 
-.toggle .line3 {
-  @media only screen and (min-width: 37.51em) {
-    transform: rotate(45deg) translate(-8px, -9px);
-  }
-  transform: rotate(45deg) translate(-5px, -6px);
-}
+// .toggle .line3 {
+//   @media only screen and (min-width: 37.51em) {
+//     transform: rotate(45deg) translate(-8px, -9px);
+//   }
+//   transform: rotate(45deg) translate(-5px, -6px);
+// }

@@ -954,19 +954,6 @@ p {
   z-index: 10;
 }
 
-.burguer div {
-  width: 2rem;
-  height: 2px;
-  background-color: #fff;
-  margin: 0.5rem;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  -webkit-transition: -webkit-transform 0.5s ease;
-  transition: -webkit-transform 0.5s ease;
-  transition: transform 0.5s ease;
-  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
-}
-
 @media only screen and (max-width: 75em) {
   .burguer {
     padding: 0.5rem 0;
@@ -975,31 +962,47 @@ p {
   }
 }
 
+.burguer__icon, .burguer__icon::before, .burguer__icon::after {
+  width: 2rem;
+  height: 2px;
+  background-color: white;
+  display: block;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.burguer__icon::before, .burguer__icon::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.burguer__icon::before {
+  top: -0.1rem;
+}
+
+.burguer__icon::after {
+  top: 1.1rem;
+}
+
+.burguer__icon:hover::before {
+  top: 0;
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.burguer__icon:hover::after {
+  top: 0;
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+
 .burguer-active {
   -webkit-transform: translateX(0) !important;
           transform: translateX(0) !important;
   opacity: 1 !important;
-}
-
-.toggle .line1 {
-  -webkit-transform: rotate(-45deg) translate(-5px, 6px);
-          transform: rotate(-45deg) translate(-5px, 6px);
-}
-
-.toggle .line2 {
-  opacity: 0 !important;
-}
-
-.toggle .line3 {
-  -webkit-transform: rotate(45deg) translate(-5px, -6px);
-          transform: rotate(45deg) translate(-5px, -6px);
-}
-
-@media only screen and (min-width: 37.51em) {
-  .toggle .line3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -9px);
-            transform: rotate(45deg) translate(-8px, -9px);
-  }
 }
 
 .music-about {
