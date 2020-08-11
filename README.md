@@ -1,7 +1,5 @@
 # Fios de Choro - Band website
 
---
-
 ## Technologies
 <ul>
   <li>HTML</li>
